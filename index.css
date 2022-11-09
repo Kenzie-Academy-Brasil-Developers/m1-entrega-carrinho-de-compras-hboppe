@@ -1,0 +1,25 @@
+li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(128, 128, 128, 0.154);
+    margin: 10px auto;
+    padding: 0px 15px;
+    width: 600px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+li.listTop {
+    background-color: black;
+    color: white;
+}
+
+li.total {
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.351);
+}

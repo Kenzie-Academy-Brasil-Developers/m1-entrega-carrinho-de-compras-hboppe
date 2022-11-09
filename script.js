@@ -11,24 +11,34 @@ let main = document.createElement('main');
 let ul = document.createElement('ul');
 main.appendChild(ul);
 body.appendChild(main);
+let liTop = document.createElement('li')
+liTop.classList.add('listTop');
+let item = document.createElement('p');
+let valor = document.createElement('p');
+item.innerHTML = 'Item'
+valor.innerHTML = 'Valor'
+liTop.appendChild(item);
+liTop.appendChild(valor);
+ul.appendChild(liTop)
 
 for(let i = 0; i < products.length; i++){
 
     let li = document.createElement('li');
     ul.appendChild(li)
 
-    let p1 = document.createElement('p'); // pq nao preciso colocar innerHTMl aqui?
+    let p1 = document.createElement('p'); 
     let p2 = document.createElement('p');
 
-    p1 = products[i].nome; // se colocar .innerhtml aqui da erro/ pq?
-    p2 = `R$ ${products[i].preco}`
+    p1.innerHTML = products[i].nome; // se colocar .innerhtml aqui da erro/ pq?
+    p2.innerHTML = `R$ ${products[i].preco}`
 
-    li.insertAdjacentHTML('afterbegin', p1)
-    li.insertAdjacentHTML('beforeend', p2)
+    li.appendChild(p1)
+    li.appendChild(p2)
 
 
 }
 let li = document.createElement('li');
+li.classList.add('total')
 ul.appendChild(li)
 
 let soma = products.reduce((a, b) => a + b.preco, 0)
