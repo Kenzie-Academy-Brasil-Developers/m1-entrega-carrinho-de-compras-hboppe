@@ -51,7 +51,10 @@ li.appendChild(p4)
 p3.innerText = 'Total'
 p4.innerText = `R$ ${soma}`
 
-
+let buttonEnd = document.createElement('button');
+buttonEnd.classList.add('end');
+ul.insertAdjacentElement('afterend', buttonEnd);
+buttonEnd.innerText = 'Finalizar Compra'
 
 
 
